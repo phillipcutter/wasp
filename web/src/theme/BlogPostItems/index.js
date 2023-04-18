@@ -2,6 +2,7 @@ import React from 'react';
 import Link from '@docusaurus/Link'
 import {BlogPostProvider} from '@docusaurus/theme-common/internal';
 import BlogPostItem from '@theme/BlogPostItem';
+
 export default function BlogPostItems({
   items,
   component: BlogPostItemComponent = BlogPostItem,
@@ -44,7 +45,7 @@ export default function BlogPostItems({
                 </h3>
               </Link>
 
-              <div className='text-sm'>
+              <div className='text-sm text-[--custom-blog-card-timestamp-color]'>
                 By {item.content.metadata.authors[0].name} on {item.content.metadata.formattedDate}
               </div>
             </div>

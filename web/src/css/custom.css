@@ -37,6 +37,9 @@
   --custom-wasp-color: #ffcc00;
   --ifm-h3-font-size: 1.3rem;
 
+  /* Blog */
+  --custom-blog-card-timestamp-color: #737373;
+
   /* Infima overrides */
   --ifm-container-width-xl: 1280px;
   --ifm-font-family-base: 'Inter';
@@ -67,5 +70,8 @@
 
 :root[data-theme='dark'] {
   --custom-background-color-diff: #2A2A2A;
+
+  /* Blog */
+  --custom-blog-card-timestamp-color: #a3a3a3;
 }
 
