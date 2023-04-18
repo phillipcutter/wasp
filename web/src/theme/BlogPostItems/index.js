@@ -21,19 +21,21 @@ export default function BlogPostItems({
               flex flex-col space-y-3
             `}
           >
-            <div
-              className={`
-                h-64 w-full relative overflow-auto overflow-y-hidden
-                flex justify-center xl:items-center
-                bg-yellow-500/25
-                rounded-t-lg
-              `}
-            >
-              <img 
-                src={item.content.frontMatter.image}
-                className='object-cover'
-              />
-            </div>
+            <Link to={item.content.metadata.permalink}>
+              <div
+                className={`
+                  h-64 w-full relative overflow-auto overflow-y-hidden
+                  flex justify-center xl:items-center
+                  bg-yellow-500/25
+                  rounded-t-lg
+                `}
+              >
+                <img 
+                  src={item.content.frontMatter.image}
+                  className='object-cover'
+                />
+              </div>
+            </Link>
 
             <div className='p-5'>
               <Link to={item.content.metadata.permalink}>
@@ -42,7 +44,9 @@ export default function BlogPostItems({
                 </h3>
               </Link>
 
-              <div>By {item.content.metadata.authors[0].name} on {item.content.metadata.formattedDate}</div>
+              <div className='text-sm'>
+                By {item.content.metadata.authors[0].name} on {item.content.metadata.formattedDate}
+              </div>
             </div>
           </div>
         )
